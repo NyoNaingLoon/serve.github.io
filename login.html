@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Log In</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+   <a href="webpage.html"><button type="button" id="back_home">Back Home</button></a>
+    <div class="center">
+        <h1>Log In here</h1>
+        <form method="post" name="log_in">
+            <div class="txt_field">
+                <input id="username" type="text" required>
+                <label for="">Username</label>
+            </div>
+            <div  class="txt_field">
+                <input id="password" type="password" required>
+                <label for="">Password</label>
+            </div>
+            <div class="pass">Forgot Password?</div>
+            <input id="login" type="submit" value="Login" onclick="click_it()">
+            <div class="signup_link">
+               Don`t you have account? <a href="signup.html">Signup</a>
+            </div>
+        </form>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

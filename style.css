@@ -1,0 +1,106 @@
+body{
+    margin: 0;
+    padding: 0;
+    
+     
+    
+}
+
+
+#ser{
+    box-shadow: 0 4px 8px 0 rgba(255, 255, 255, 0.2), 0 6px 20px 0 rgba(255, 255, 255, 0.19);
+    
+}
+
+#facebook::before{
+    content:url(fc.png);
+
+}
+.logoa{
+   
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.img1{
+    width: 50px;
+    height: 40px;
+}
+
+
+
+#abo{
+    
+    margin-top: 30px;
+}
+#user_png{
+    background-color: rgb(37, 99, 154);
+    position: relative;
+    left: 20px;
+    border-radius: 35px;
+    transition: .4s;
+}
+#user_png:hover{
+ cursor: pointer;
+ background-color: rgb(77, 172, 255);
+ 
+}
+#sign_in{
+    margin-left: 10px;
+    font-size: large;
+}
+#form{
+    margin: 30px;
+    background: #000;
+    border-radius: 30px;
+}
+p{
+    margin: 50px;
+  
+    
+}
+  ul a  li{
+    font-size: 20px;
+    margin-left: 50px;
+    margin: 20px;
+    color: #000;
+    text-decoration: none;
+    display: inline-block;
+   
+}
+#ios{
+    position: relative;
+}
+
+#ios::before,
+#ios::after{
+    --scale:0;
+    position: absolute;
+    content: '';
+    top: -.25rem;
+    left: 50%;
+    
+    transform: translateX(-50%) translateY(-100%) scale(var(--scale));
+    transition: 150ms transform;
+    transform-origin: bottom center;
+}
+
+#ios::before{
+    content: attr(data-tooltip);
+    color: white;
+    border-radius: .3rem;
+    padding: .5rem;
+    text-align: center;
+    width: max-content;
+    max-width: 100%;
+    background:#333;
+}
+#ios:hover::before{
+    --scale:1;
+}
+
+#span{
+    color: blue;
+    display: none;
+}

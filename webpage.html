@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Enter</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  </head>
+  <style>
+    *{
+        padding: 0;
+        margin: 0;
+    }
+  body{
+    background-color: rgb(89, 89, 89);
+  }
+  #center{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    
+    
+
+  }
+  button{
+    background-color: rgb(45, 45, 255);
+    border: 1px solid;
+    height: 50px;
+    width: 100px;
+    margin-left:2px ;
+    background:transparent;
+    border-radius: 0px 20px 20px 0;
+    transition: .4s;
+  }
+  button:hover{
+    background-color: rgb(53, 53, 53);
+    transform: .4s;
+  }
+  input{
+    border: 1px solid #000;
+    height: 50px;
+    width: 230px;
+    font-size: 20px;
+    font: #000;
+    background:transparent;
+    border-radius: 20px 0px 0 20px;
+    
+  }
+  #h1{
+    margin-top: 15%;
+  }
+  #p1{
+    margin-top: 10%;
+  }
+  </style>
+  
+  <body>
+    <div>
+        <div class="d-flex justify-content-center" id="h1"><h1>Hello</h1></div>
+        <form class="d-flex justify-content-center" id="center">
+       
+         <input type="password" placeholder="       Enter Password..." >
+         <button type="button">Enter</button>
+        
+        
+        </form>
+        <div class="d-flex justify-content-center" id="p1"><p id="demo"></p> </h1></div>
+        <div class="d-flex justify-content-center" id="p2"><p id="demo"></p> </h1></div>
+        <div class="d-flex justify-content-center" id="p3"><p id="demo"></p> </h1></div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+  <script>
+    document.getElementById("p2").innerHTML = "Admin code:water"
+    document.getElementById("p3").innerHTML = "User Code:fire"
+    const inp = document.querySelector('input');
+    const btn =document.querySelector('button');
+
+    btn.addEventListener('click',()=>{
+        if(inp.value=="water"){
+            const myTimeout = setTimeout(myGreeting, 2000);
+               document.getElementById("p1").innerHTML = "Verifying..."
+                function myGreeting() {
+                  window.open('admin.html');
+                }
+           
+        } else if(inp.value=="fire"){
+            const myTimeout = setTimeout(myGreeting, 2000);
+            document.getElementById("p1").innerHTML = "Verifying..."
+             function myGreeting() {
+                window.open('index.html'); 
+             }
+           
+        }
+        else{
+            const myTimeout = setTimeout(myGreeting, 4000);
+               document.getElementById("p1").innerHTML = "Verifying..."
+               const myWrong = setTimeout(myGoing, 1000);
+               function myGoing(){
+                document.getElementById("p1").innerHTML = "Password doesn't match and go login page!"
+               }
+              
+                function myGreeting() {
+                    window.open('login.html');
+                }
+          
+            
+        }
+    });
+    
+  
+
+   
+  </script>
+</html>
